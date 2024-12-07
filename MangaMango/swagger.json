@@ -1,0 +1,41 @@
+{
+    "paths": {
+      "/api/admin/manga": {
+        "get": {
+          "summary": "Get all mangas",
+          "tags": ["Admin"],
+          "responses": {
+            "200": {
+              "description": "List of mangas",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": { "$ref": "#/components/schemas/Manga" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Manga": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "author": { "type": "string" },
+            "coverArt": { "type": "string" },
+            "genre": { "type": "string" },
+            "rating": { "type": "number" },
+            "contentRating": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+  
