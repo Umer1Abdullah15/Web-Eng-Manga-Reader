@@ -49,6 +49,7 @@
 
 const app = require('./app');
 const mongoose = require('mongoose');
+const connectDB = require('./config/db');
 require('dotenv').config();
 
 // Connect to MongoDB
